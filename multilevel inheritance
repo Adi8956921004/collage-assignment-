@@ -1,0 +1,33 @@
+import java.util.*;
+// Base class (Parent)
+class Animal {
+    void eat() {
+        System.out.println("Animals eat food.");
+    }
+}
+
+// Intermediate class (Child of Animal)
+class Mammal extends Animal {
+    void walk() {
+        System.out.println("Mammals can walk.");
+    }
+}
+
+// Derived class (Child of Mammal)
+class Dog extends Mammal {
+    void bark() {
+        System.out.println("Dog barks loudly.");
+    }
+}
+
+// Main class
+public class MultilevelInheritanceDemo {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+
+        // Accessing methods from all three classes
+        myDog.eat();   // from Animal
+        myDog.walk();  // from Mammal
+        myDog.bark();  // from Dog
+    }
+}
